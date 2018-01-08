@@ -3,8 +3,10 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-Loop, 400
-{	Random, var1x, 380,480
+;This script makes your character complete a quest and receive experience and gold for it, indefinitely.
+
+Loop, 600
+{	Random, var1x, 380,480      ;heading to quest area
 	Random, var1y, 391,406
 
 	Random, var2x, 570,610
@@ -19,7 +21,7 @@ Loop, 400
 	Random, var5x, 570,610
 	Random, var5y, 587,591
 
-	;fight starts
+				;fight begins
 
 	Random, var6x, 365,425
 	Random, var6y, 448,451
@@ -57,7 +59,7 @@ Loop, 400
 	Random, var17x, 600,700
 	Random, var17y, 541,546
 
-	Random s400, 380,450
+	Random s400, 380,450	;randomized mouse speed to avoid getting caught for using the script
 	Random s500, 450,550
 	Random s750, 700,800
 	Random s1000, 950,1050
