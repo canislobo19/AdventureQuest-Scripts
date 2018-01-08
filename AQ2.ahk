@@ -3,9 +3,13 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+
+;This script makes your character complete a quest and receive experience and gold for it, indefinitely.
+
+
 Loop, 660
 {
-	Random spd1, 0,100
+	Random spd1, 0,100 ;heading to quest area
 	Random spd2, 0,100
 	Random spd3, 0,100
 
@@ -21,6 +25,8 @@ Loop, 660
 	Random s9000, 8900, 9100
 	Random s10500, 10400,10600
 	Random s11000, 10900,11100
+
+;plays through the quest
 
 ImageSearch, var1x, var1y, 0,0, %A_ScreenWidth%, %A_ScreenHeight%, C:\pics\1.png
 MouseClick, ,%var1x%, %var1y%,,%spd1%
@@ -52,7 +58,6 @@ Sleep, s500
 
 MouseClick, ,%var7x%, %var7y%,,%spd2%
 Sleep, s1000
-
 	
 	ImageSearch, var8x, var8y, 0,0, %A_ScreenWidth%, %A_ScreenHeight%, C:\pics\6.png
 	MouseClick, ,%var8x%, %var8y%,,%spd3%
@@ -60,8 +65,10 @@ Sleep, s1000
 
 	MouseClick, ,%var8x%, %var8y%,,%spd3%
 	Sleep, s10500
+	
+;click thourgh cutscene and victory dialog
 
-ImageSearch, var9x2, var9y2, 0,0, %A_ScreenWidth%, %A_ScreenHeight%, C:\pics\7.png
+ImageSearch, var9x2, var9y2, 0,0, %A_ScreenWidth%, %A_ScreenHeight%, C:\pics\7.png   
 if ErrorLevel = 1
 {	
 	MouseClick, ,%var8x%, %var8y%,,%spd1%
