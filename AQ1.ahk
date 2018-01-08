@@ -3,6 +3,7 @@
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
+;This is an older version of the script. It uses pixel values on the screen to go through the quest. The new version uses images.
 ;This script makes your character complete a quest and receive experience and gold for it, indefinitely.
 
 Loop, 600
